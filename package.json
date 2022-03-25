@@ -1,0 +1,44 @@
+{
+    "name": "vscode-workspace-util",
+    "displayName": "vscode workspace util",
+    "description": "空间切换小工具",
+    "version": "0.0.2",
+    "publisher": "haohailiang",
+    "private": true,
+    "license": "MIT",
+    "icon": "images/hulu.jpeg",
+    "repository": "https://github.com/haohailiang/vscode-workspace-util",
+    "bugs": "https://github.com/haohailiang/vscode-workspace-util/issues",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.switchDiyWorkspace"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.switchDiyWorkspace",
+                "title": "switch diy workspace"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "eslint . --ext .ts,.tsx",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.0",
+        "@typescript-eslint/eslint-plugin": "^4.16.0",
+        "@typescript-eslint/parser": "^4.16.0",
+        "eslint": "^7.21.0",
+        "typescript": "^4.5.5",
+        "vscode": "^1.1.37"
+    }
+}
