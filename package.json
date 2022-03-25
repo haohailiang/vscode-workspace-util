@@ -2,7 +2,7 @@
     "name": "vscode-workspace-util",
     "displayName": "vscode workspace util",
     "description": "空间切换小工具",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "haohailiang",
     "private": true,
     "license": "MIT",
@@ -25,7 +25,23 @@
                 "command": "extension.switchDiyWorkspace",
                 "title": "switch diy workspace"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "切换空间配置文件",
+            "properties": {
+                "switchWorkspace.enable": {
+                    "type": "boolean",
+                    "description": "启用自定义切换空间功能",
+                    "default": false
+                },
+                "switchWorkspace.list": {
+                    "type": "array",
+                    "description": "切换空间的列表",
+                    "default": []
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
