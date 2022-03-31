@@ -2,7 +2,7 @@
     "name": "vscode-workspace-util",
     "displayName": "vscode workspace util",
     "description": "空间切换小工具",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "haohailiang",
     "private": true,
     "license": "MIT",
@@ -30,11 +30,6 @@
             "type": "object",
             "title": "切换空间配置文件",
             "properties": {
-                "switchWorkspace.enable": {
-                    "type": "boolean",
-                    "description": "启用自定义切换空间功能",
-                    "default": false
-                },
                 "switchWorkspace.list": {
                     "type": "array",
                     "description": "切换空间的列表",

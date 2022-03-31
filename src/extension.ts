@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
         // }
         const configWorkspace = vscode.workspace.getConfiguration("switchWorkspace");
 
-        if (configWorkspace.enable) {
+        if (configWorkspace?.list?.length > 0) {
             const workspaceList: { displayName: string, realPath: string }[] = configWorkspace.list.map((v: string) => {
                 const re = /\/(?<projectName>[a-zA-Z-0-9]+)$/u;
                 const result = re.exec(v);
