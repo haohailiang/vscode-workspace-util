@@ -2,7 +2,7 @@
     "name": "vscode-workspace-util",
     "displayName": "vscode workspace util",
     "description": "空间切换小工具",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "haohailiang",
     "private": true,
     "license": "MIT",
@@ -16,21 +16,62 @@
         "Other"
     ],
     "activationEvents": [
+        "onCommand:extension.switchDiyWorkspace.enable",
+        "onCommand:extension.switchDiyWorkspace.disable",
+        "onCommand:extension.switchDiyWorkspace.empty",
+        "onCommand:extension.switchDiyWorkspace.show",
+        "onCommand:extension.switchDiyWorkspace.add",
+        "onCommand:extension.switchDiyWorkspace.remove",
         "onCommand:extension.switchDiyWorkspace"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
+                "title": "启用 switchDiyWorkspace switch-1",
+                "command": "extension.switchDiyWorkspace.enable"
+            },
+            {
+                "title": "停用 switchDiyWorkspace switch-2",
+                "command": "extension.switchDiyWorkspace.disable"
+            },
+            {
+                "title": "置空 switchDiyWorkspace switch-3",
+                "command": "extension.switchDiyWorkspace.empty"
+            },
+            {
+                "title": "查看 switchDiyWorkspace switch-4",
+                "command": "extension.switchDiyWorkspace.show"
+            },
+            {
+                "title": "添加当前项目 switchDiyWorkspace switch-5",
+                "command": "extension.switchDiyWorkspace.add"
+            },
+            {
+                "title": "删除当前项目 switchDiyWorkspace switch-6",
+                "command": "extension.switchDiyWorkspace.remove"
+            },
+            {
+                "title": "切换空间 switchDiyWorkspace switch-7",
+                "command": "extension.switchDiyWorkspace"
+            }
+        ],
+        "keybindings": [
+            {
                 "command": "extension.switchDiyWorkspace",
-                "title": "switch diy workspace"
+                "mac": "ctrl+w"
             }
         ],
         "configuration": {
             "type": "object",
             "title": "切换空间配置文件",
             "properties": {
-                "switchWorkspace.list": {
+                "switchDiyWorkspace.enable": {
+                    "type": "boolean",
+                    "description": "是否开启该插件的功能",
+                    "default": false
+                },
+                "switchDiyWorkspace.list": {
                     "type": "array",
                     "description": "切换空间的列表",
                     "default": []
